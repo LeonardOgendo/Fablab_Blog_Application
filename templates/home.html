@@ -1,0 +1,99 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title%} Home {% endblock %}
+
+{% block content %}
+<section class="featured--blogs">
+    <h2>Blog</h2>
+    <p>Discover top articles, tutorials, and insights
+        from the Tech world.
+
+    <div class="categories">
+        <span>All</span>
+        <span>Web</span>
+        <span>Android</span>
+        <span>Cybersecurity</span>
+        <span>Cloud Computing</span>
+        <span>Data Science</span>
+
+        <div class="sort--by">
+            <span id="sort">Sort by:</span>
+            <select>
+                <option>Newest</option>
+                <option>Featured</option>
+                <option>Popular</option>
+            </select>
+        </div>
+
+    </div>
+    <div class="featured">
+        <div class="col-3">
+            <img src="{% static "/images/csec.jpeg" %}" alt="blog_post" />
+            <span class="title">The Future of Cybersecurity: Trends and Predictions for 2025</span>
+            <p id="brief-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, 
+                veritatis unde.
+            </p>
+            <div class="author-and-date">
+                <span>Leon Me</span>
+                <span id="date">16 July 2024</span>
+            </div>
+        </div>
+        <div class="col-3">
+            <img src="{% static "/images/csec.jpeg" %}" alt="blog_post" />
+            <span class="title">The Future of Cybersecurity: Trends and Predictions for 2025</span>
+            <p id="brief-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, 
+                veritatis unde.
+            </p>
+            <div class="author-and-date">
+                <span id="author">Leon Me</span>
+                <span id="date">16 July 2024</span>
+            </div>
+        </div>
+        <div class="col-3">
+            <img src="{% static "/images/csec.jpeg" %}" alt="blog_post" />
+            <span class="title">The Future of Cybersecurity: Trends and Predictions for 2025</span>
+            <p id="brief-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, 
+                veritatis unde.
+            </p>
+            <div class="author-and-date">
+                <span>Leon Me</span>
+                <span id="date">16 July 2024</span>
+            </div>
+        </div>
+
+    </div>
+    <div class="pagination">
+        <i class="fa fa-chevron-left"></i>
+        <span>1</span>
+        <span>2</span>
+        <span>3</span>
+        <span>4</span>
+        <span>5</span>
+        <i class="fa fa-chevron-right"></i>
+    </div>
+</section>
+
+<!--content gallery grid-->
+<section class="gallery--grid">
+    <div class="container">
+        <div class="col-2">
+            <div id="explore">
+                <p id="main-text">Explore more and build your<br> professional career.
+                <p id="info">Book a professional session with us</p>
+                <button class="book--btn">Book Now &#8594;</button>
+            </div>
+            <div id="col-2--atls">
+                <p>Articles Available</p>
+                <span>68</span>
+            </div>
+        </div>
+        <div class="col-sng">
+            <i class="fa fa-code"></i>
+            <p>Beyond just hands-on skills, creating life time<br> connections with a vast community</p>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
+

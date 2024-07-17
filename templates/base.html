@@ -1,0 +1,65 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Skies Bootcamp{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'styles.css' %}"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="{% static 'index.js' %}" defer></script>
+</head>
+<body>
+    <section class="header">
+        <nav id="navbar">
+            <div class="navbar">
+                <div class="container--logo">
+                    <img id="logo" src="{% static '/images/fablab_logo.png' %}" />
+                    <span id="org--name">Fablab</span>
+                </div>
+                <div class="search-bar">
+                    <form id="search--form">
+                        <input type="search" placeholder="Search" id="input--search" />
+                        <button id="search-btn" type="submit" >Search</button>
+                    </form>
+                </div>
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">About</a></li>
+                    <li><a href="">Blog</a></li>
+                    <li><a href="">Categories</a></li>
+                    <li id="login"><a href="">Login</a></li>
+                    <li id="sign-up"><a href="">Sign Up</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="hero">
+            <h2 class="hero-header">Exploring the Future of Technology</h2>
+            <p id="hero-text">Dive into our blog where we dissect the latest tech <br>trends,
+                share insights from industry experts, and explore <br>innovative solutions.
+            </p>
+        </div>
+
+    </section>
+    <section></section>
+
+    <!--content -->
+    
+    <section class="content">
+        {% block content %}
+        {% endblock %}
+    </section>
+
+    <!--footer-->
+    <footer>
+        <div class="footer-container">
+            <div class="obj">
+                <img src="{% static '/images/fablab_logo.png' %}"/>
+                <span>Fablab</span>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
